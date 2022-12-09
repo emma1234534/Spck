@@ -1,0 +1,37 @@
+
+body{
+background: black;
+}
+ 
+ 
+
+.bubbles{
+  position: relative;
+  display: flex;
+}
+.bubbles span{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: red;
+  margin: 0 4px;
+  border-radius: 50%;
+box-shadow: 0 0 0 5px gray,
+0 0 10px grey, 0 0 50px brown;
+animation: animate 15s linear infinite;
+animation-duration: calc(100s / var(--i));
+}
+@keyframes animate{
+  0%{
+  transform: translateY(100vh) scale(0);
+  }
+  100%{
+    transform:translatey(-10) scale(1);
+  }
+}
+.bubbles span:nth-child(even){
+  background: wheat;
+  border-radius: 50%;
+box-shadow: 0 0 0 5px gray,
+0 0 10px green, 0 0 50px brown;
+}
